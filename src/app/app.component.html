@@ -1,0 +1,24 @@
+<div class="basic-container">
+    <mat-toolbar class="menu-bar mat-elevation-z1">
+        <span *ngFor="let item of navItems;let i = index" class="hp100 span-container">
+            <!-- Handle branch node buttons here -->
+            <span *ngIf="item.children && item.children.length > 0">
+                <button mat-button [matMenuTriggerFor]="menu.childMenu" class="hp100 px30 fs20" [ngClass]="{'show-underline':isMenuOpen(i)}">
+                    {{item.displayName | titlecase}}
+                    <mat-icon class="icon" [ngClass]="{'rotate-icon':isMenuOpen(i)}">{{item.iconName}}</mat-icon>
+                </button>
+                <app-menu-item #menu [menuItems]="item.children" [additionalItems]="item.additionalItems" [heading]="item.heading" [additionalHeading]="item.additionalHeading"></app-menu-item>
+            </span>
+            <!-- Leaf node buttons here -->
+            <span *ngIf="!item.children || item.children.length === 0">
+                <button mat-button color="primary" [routerLink]="item.route">
+                    {{item.displayName | titlecase}}
+                </button>
+            </span>
+        </span>
+        <mat-icon class="px30 h-auto fs40">search</mat-icon>
+        <mat-icon class="px30 h-auto fs40 icon-amazon-user-account">account_circle</mat-icon>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+</div>

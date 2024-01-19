@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow: hidden;
+    background-color: #000;
+}
+
+// ============================================== WIDTH_PROPERTIES
+@for $i from 1 through 100 {
+    .wp#{$i} {
+        width: 1% * $i !important;
+    }
+}
+
+@for $i from 0 through 600 {
+    .w#{$i} {
+        width: 1px * $i !important;
+    }
+}
+
+// ============================================== HEIGHT_PROPERTIES
+@for $i from 0 through 600 {
+    .h#{$i} {
+        height: 1px * $i !important;
+    }
+}
+@for $i from 0 through 600 {
+    .hp#{$i} {
+        height: 1% * $i !important;
+    }
+}
+
+.h-auto {
+    height: auto !important;
+}
+
+// ============================================== PADDING_PROPERTIES
+@for $i from 0 through 600 {
+    .py#{$i} {
+        padding-block: 1px * $i !important;
+    }
+}
+@for $i from 0 through 600 {
+    .px#{$i} {
+        padding-inline: 1px * $i !important;
+    }
+}
+
+// ============================================== MARGIN_PROPERTIES
+@for $i from 0 through 600 {
+    .my#{$i} {
+        margin-block: 1px * $i !important;
+    }
+}
+@for $i from 0 through 600 {
+    .mx#{$i} {
+        margin-inline: 1px * $i !important;
+    }
+}
+@for $i from 0 through 600 {
+    .ml#{$i} {
+        margin-left: 1px * $i !important;
+    }
+}
+
+// ============================================== FONT_PROPERTIES
+@for $i from 0 through 600 {
+    .fs#{$i} {
+        font-size: 1px * $i !important;
+    }
+}

@@ -1,0 +1,28 @@
+.children-heading {
+    color: #f2f2f3 !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    height: min-content;
+}
+
+.items {
+    height: min-content !important;
+}
+
+@media (max-width: 768px) {
+    span.grid-container {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 20px !important;
+        max-width: 80vw !important;
+    }
+
+    div.grid-container {
+        h2 {
+            width: max-content !important;
+        }
+    }
+}

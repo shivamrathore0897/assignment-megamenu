@@ -1,0 +1,45 @@
+<ng-container *ngIf="true">
+  <mat-menu #childMenu="matMenu" [overlapTrigger]="false">
+    <span [ngClass]="{'grid-container' : additionalItems}">
+      <div [ngClass]="{'grid-container' : menuItems.length > 5}">
+        <ng-container *ngIf="heading">
+          <h2 class="ml5 my0 py10 children-heading">{{heading}}</h2>
+          <br>
+        </ng-container>
+        <span class="items" *ngFor="let menuItem of menuItems">
+          <span *ngIf="menuItem.children && menuItem.children.length > 0">
+            <button mat-menu-item color="primary" [matMenuTriggerFor]="menu.childMenu">
+              <span>{{menuItem.displayName | titlecase}}</span>
+            </button>
+            <app-menu-item #menu [menuItems]="menuItem.children" [heading]="menuItem.heading"></app-menu-item>
+          </span>
+          <span *ngIf="!menuItem.children || menuItem.children.length === 0">
+            <button mat-menu-item [routerLink]="menuItem.route">
+              <span>{{menuItem.displayName | titlecase}}</span>
+            </button>
+          </span>
+        </span>
+      </div>
+
+      <div class="grid-container" *ngIf="additionalItems">
+        <ng-container *ngIf="additionalHeading">
+          <h2 class="ml5 my0 py10 children-heading">{{additionalHeading}}</h2>
+          <br>
+        </ng-container>
+        <span class="items" *ngFor="let additionalItem of additionalItems">
+          <span *ngIf="additionalItem.children && additionalItem.children.length > 0">
+            <button mat-menu-item color="primary" [matMenuTriggerFor]="menu.childMenu">
+              <span>{{additionalItem.displayName | titlecase}}</span>
+            </button>
+            <app-menu-item #menu [menuItems]="additionalItem.children" [heading]="additionalItem.heading"></app-menu-item>
+          </span>
+          <span *ngIf="!additionalItem.children || additionalItem.children.length === 0">
+            <button mat-menu-item [routerLink]="additionalItem.route">
+              <span>{{additionalItem.displayName | titlecase}}</span>
+            </button>
+          </span>
+        </span>
+      </div>
+    </span>
+  </mat-menu>
+</ng-container>
