@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
 # OneTimeStep:
-Before run this project you have to install the Node Module. you can install it by using the command 'npm i' or if there is some dependency issue becasue of node or angular versions then you can also try to run an alternate command 'npm i --force'.
+Before running this project you have to install the Node Modules. You can install it by using the command 'npm i' or if there is some dependency issue because of node or angular versions then you can also try to run an alternate command 'npm i --force'.
 
 ## Development server
 
@@ -11,14 +11,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.  
+To get more help on the Angular CLI use `ng help` or check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.  
 or 
 you can also connect with me directly at shivamrathore0897@gmail.com.
 
 
 ## Description
 
-This project utilizes a JSON file to create and customize a mega menu with a versatile and hierarchical structure. It facilitates seamless navigation and organization of menu items, catering to the needs of large-scale applications.
+This project utilizes a JSON file to create and customize  mega menu with a versatile and hierarchical structure. It facilitates seamless navigation and organization of menu items, catering to the needs of large-scale applications.
 
 
 ### Warning: Make sure the structure of the JSON file remains the same.
